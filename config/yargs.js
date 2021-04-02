@@ -5,17 +5,17 @@ const argv = require('yargs')
     type: 'number',
     demandOption: true
   })
-  .option('l', {
-    alias: 'listar',
-    describe: 'Muestra la tabla en consola',
-    type: 'boolean',
-    default: false
-  })
   .option('h', {
     alias: 'hasta',
     describe: 'Número hasta donde se genera la tabla',
     type: 'number',
     default: 10
+  })
+  .option('l', {
+    alias: 'listar',
+    describe: 'Muestra la tabla en consola',
+    type: 'boolean',
+    default: false
   })
   .check((argv, options) => {
     if (isNaN(argv.base)) {
